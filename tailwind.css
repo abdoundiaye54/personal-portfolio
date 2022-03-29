@@ -519,11 +519,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -556,16 +551,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mt-24 {
   margin-top: 6rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mt-3 {
@@ -669,10 +660,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.5rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-8 {
   gap: 2rem;
 }
@@ -763,10 +750,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.p-16 {
-  padding: 4rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -829,11 +812,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -841,10 +819,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .text-white {
@@ -949,6 +923,34 @@ html,body{
   opacity: 1;
 }
 
+/* Child Text Container */
+
+.content_img .test{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: red;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+
+.content_img:hover{
+  cursor: pointer;
+}
+
+.content_img:hover div{
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.7;
+}
+
 @media (min-width: 768px) {
   .md\:absolute {
     position: absolute;
@@ -1019,14 +1021,6 @@ html,body{
     margin-left: 5rem;
   }
 
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
   .lg\:h-72 {
     height: 18rem;
   }
@@ -1037,10 +1031,6 @@ html,body{
 
   .lg\:w-4 {
     width: 1rem;
-  }
-
-  .lg\:w-auto {
-    width: auto;
   }
 
   .lg\:w-12 {
@@ -1055,41 +1045,13 @@ html,body{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
   .lg\:gap-32 {
     gap: 8rem;
-  }
-
-  .lg\:space-x-32 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(8rem * var(--tw-space-x-reverse));
-    margin-left: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
-  }
-
-  .lg\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .lg\:text-left {
-    text-align: left;
   }
 
   .lg\:text-7xl {
@@ -1103,4 +1065,3 @@ html,body{
     display: block;
   }
 }
-
